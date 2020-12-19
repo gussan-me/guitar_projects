@@ -1,0 +1,203 @@
+body{
+  margin: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+main{
+  display: flex;
+}
+
+.main-wrapper,.header-wrapper {
+  width: 1038px;
+  margin: 0 auto;
+}
+
+.about h1,.popular h1,.posts h1,.new-posts h1,.infomation h1 {
+  color: rgba(255, 255, 255, 0.966);
+  font-size: .9rem;
+  margin-top: 15px;
+  background-color: #75A9FF;
+  padding: 10px 0 10px 10px ;
+}
+
+
+
+/* header start */
+
+header{
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 2px  silver;
+  height: 56px;
+}
+
+.header-wrapper,.main-wrapper{
+  display: flex;
+}
+
+.header-right{
+  display: flex;
+  margin-left: auto;
+}
+
+.search{
+  display: flex;
+  padding-top: 14px;
+}
+
+.search-wrapper input{
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.searchText{
+  height: 24px;
+  background-color: rgb(250, 246, 246);
+}
+
+.searchBtn{
+  height: 28px;
+}
+
+.login{
+  padding-left: 20px;
+}
+
+.login-btn:hover{
+  text-decoration: underline;
+}
+
+.login-btn{
+  line-height: 4.5;
+  font-size: .8rem;
+  color: black;
+}
+
+/* header end */
+.main-wrapper{
+  display: flex;
+}
+
+.main-content{
+  width: 728px;
+}
+
+
+.about{
+  width: 100%;
+}
+
+/* side start */
+.side-content{
+  width: 300px;
+  margin-left: auto;
+}
+
+.panel-content {
+  height: 250px;
+  margin-top: 15px;
+  background-color: rgb(238, 234, 234);
+  font-size: 1rem;
+}
+
+.about h1{
+  color: rgba(255, 255, 255, 0.966);
+  font-size: .9rem;
+}
+
+.about p{
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.post-title h1 {
+  margin-bottom: 0;
+}
+
+.post-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background-color: rgb(245, 239, 239);
+
+}
+
+.practice{
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.practice:hover{
+  opacity: .6;
+}
+
+.practice a{
+  width: 130px;
+  height: 50px;
+  font-size: 1.2rem;
+  line-height: 50px;
+  display: inline-block;
+  color: black;
+}
+
+.funk,.neosoul,.classic,.folksong,.etc {
+  margin-top: 5px;
+}
+
+/* side end */
+
+
+
+
+/* footer start */
+footer{
+  background-color: #808080;
+}
+
+.footer-wrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.footer-wrapper ul {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.footer-item {
+  text-align: center;
+  display: inline-block;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+.footer-item:not(:last-child)::after {
+  content: "|";
+  color: white;
+  padding-left: 10px;
+}
+
+.footer-item a{
+  color: white;
+  letter-spacing: 3px;
+}
+
+.footer-item a{
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* footer end */
+
+
+

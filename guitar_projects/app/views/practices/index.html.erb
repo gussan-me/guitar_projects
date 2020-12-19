@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ギター練習_課題曲検索サイト</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-left">
+          <h1>ギター練習 課題曲検索サイト</h1>
+        </div>
+        <div class="header-right">
+          <form class="search" id="makeImg">
+            <div class="search-wrapper">
+              <input type="text" id="inText" class="searchText" placeholder="キーワード検索">
+              <input type= submit value= 検索 class="searchBtn">
+            </div>
+          </form>
+          <div class="login">
+            <a href="#" class="login-btn">ログイン</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="main-wrapper">
+        <div class="main-content">
+          <div class=""></div>
+          <div class="about">
+            <h1>ギター練習 課題曲検索サイトとは</h1>
+            <p>
+              ギター練習 課題曲検索サイトは、ギタリストの練習曲の情報交換サイトです。<br>
+              様々なジャンルのギタリスト同士で、練習になる曲の情報交換をしましょう！
+            </p>
+          </div>  
+          
+          <div class="posts">
+            <div class="post-title">
+              <h1>ジャンル毎の練習曲を探す</h1>
+              <div class="post-content">
+                <div class="pops practice">
+                  <a href="#">POPS</a>
+                </div>
+                <div class="rock practice">
+                  <a href="#">ROCK</a>
+                </div>
+                <div class="hm/hr practice">
+                  <a href="hmhr">HM/HR</a>
+                </div>
+                <div class="jazz practice">
+                  <a href="#">JAZZ</a>
+                </div>
+                <div class="blues practice">
+                  <a href="#">BLUES</a>
+                </div>
+                <div class="funk practice">
+                  <a href="#">FUNK</a>
+                </div>
+                <div class="neosoul practice">
+                  <a href="#">NEO SOUL</a>
+                </div>
+                <div class="classic practice">
+                  <a href="#">CLASSIC</a>
+                </div>
+                <div class="folksong practice">
+                  <a href="#">FOLK SONG</a>
+                </div>
+                <div class="etc practice">
+                  <a href="#">その他</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="new-posts">
+            <h1>新着投稿</h1>
+            <% @practices.each do |practice| %>
+            <h2><%= practice.title %></h2>
+            <p><%= practice.content %></p>
+            <% end %>
+            <%= paginate @practices %>
+          </div>
+
+          <div class="infomation">
+            <h1>お知らせ</h1>
+          </div>
+          
+        </div>
+        
+        
+        
+        
+        <div class="side-content">
+            <div class="panel-container">
+              <div class="panel-content">
+                <span id="final_closed_text" >
+                  <span>
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_84x28dp.png">
+                  </span>
+                  <span>
+                    はこの広告の表示を停止しました
+                  </span>
+              </div>
+            </div>
+          <div class="popular">
+            <h1>人気投稿</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <ul>
+          <li class="footer-item"><a>TOP</a></li>
+          <li class="footer-item"><a>課題曲検索サイトとは</a></li>
+          <li class="footer-item"><a>Q&A</a></li>
+          <li class="footer-item"><a>掲示板ガイド</a></li>
+          <li class="footer-item"><a>個人情報保護方針</a></li>
+          <li class="footer-item"><a>運営者情報</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
