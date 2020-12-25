@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ギター練習_課題曲検索サイト</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-left">
+          <h1><%= link_to"ギター練習 課題曲検索サイト",root_path %></h1>
+        </div>
+        <div class="header-right">
+          <form class="search" id="makeImg">
+            <div class="search-wrapper">
+              <input type="text" id="inText" class="searchText" placeholder="キーワード検索">
+              <input type= submit value= 検索 class="searchBtn">
+            </div>
+          </form>
+          <div class="login">
+            <a href="#" class="login-btn">ログイン</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="main-wrapper">
+        <div class="main-content">
+          <div class="thread-title">
+            <h1>HM/HR</h1>
+          </div>
+          <div class="new-posts">
+            <h1>新着投稿<p class="post-button" id="open"><span>投稿をする</span></p></h1>
+            <% @hmhrpractices.each do |hmhrpractice| %>
+            <p><%= hmhrpractice.name %></p>
+            <h2><%= hmhrpractice.title %></h2>
+            <p><%= hmhrpractice.content %></p>
+            <% end %>
+            <%= paginate @hmhrpractices %>
+          </div>
+          
+        </div>
+        
+        
+        
+        
+        <div class="side-content">
+            <div class="panel-container">
+              <div class="panel-content">
+                <span id="final_closed_text" >
+                  <span>
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_84x28dp.png">
+                  </span>
+                  <span>
+                    はこの広告の表示を停止しました
+                  </span>
+              </div>
+            </div>
+          <div class="popular">
+            <h1>人気投稿</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <ul>
+          <li class="footer-item"><a>TOP</a></li>
+          <li class="footer-item"><a>課題曲検索サイトとは</a></li>
+          <li class="footer-item"><a>Q&A</a></li>
+          <li class="footer-item"><a>掲示板ガイド</a></li>
+          <li class="footer-item"><a>個人情報保護方針</a></li>
+          <li class="footer-item"><a>運営者情報</a></li>
+        </ul>
+      </div>
+    </footer>
+    
+    <div id="mask" class="hidden"></div>
+    <div id="modal" class="hidden">
+          
+            <h2>課題曲を投稿する</h2>
+            <%= form_with model: @hmhrpractice,local: true do |f| %>
+              <div>
+                <label>名前</label>
+                <%= f.text_field :name, class: "form-control", id: "js-name" %>
+                <p id='js-name-error' class="hidden">名前を入力してください。</p>
+              </div>
+              
+              <div>
+                <label>タイトル</label>
+                <%= f.text_field :title, class: "form-control",id: "js-title" %>
+                <p id='js-title-error' class="hidden">タイトルを入力してください。</p>
+              </div>
+              
+              <div>
+                <label>内容</label>
+                <%= f.text_area :content, class: "form-control",id: "js-content" %>
+                <p id='js-content-error' class="hidden">投稿内容を入力してください。</p>
+              </div>
+              
+              <div>
+                <%= f.submit "投稿内容を確認する", class: "btn btn-primary", id: "submit",'data-disable-with' => false %>
+              </div>
+            <% end %>
+        
+      <div id="close">
+        閉じる
+      </div>
+    </div>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

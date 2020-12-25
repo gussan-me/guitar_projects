@@ -1,0 +1,74 @@
+body {
+  font-size: 14px;
+}
+
+#open, #close {
+  cursor: pointer;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 1px 0;
+  margin: 0 auto;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#modal p {
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+}
+
+.post-button {
+    display: inline-block;
+    float: right;
+    font-size: .7rem;
+    background-color: #faf6f6;
+    color: black;
+}
+
+#js-name-error.hidden,#js-title-error.hidden,#js-content-error.hidden {
+  display: none;
+}
+
+#js-name-error,#js-title-error,#js-content-error {
+  color: red;
+}
+
+#modal p {
+  margin: 0;
+}
